@@ -1,4 +1,4 @@
-import Main from "./components/ui/Main";
+import Main from "./components/ui/Semantic/Main";
 
 export default function Home() {
   return (
