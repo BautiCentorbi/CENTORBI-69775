@@ -1,4 +1,8 @@
-const productos = ({params}) => {
+export async function generateMetadata({params,searchParams}, parent) {
+    title: `Productos : ${params}`
+}
+
+const Productos = ({params}) => {
     return (
         <div>
             Estas viendo : {params.category}
@@ -6,4 +10,4 @@ const productos = ({params}) => {
     )
 }
 
-export default productos
+export default Productos
