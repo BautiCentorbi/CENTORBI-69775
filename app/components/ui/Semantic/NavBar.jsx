@@ -35,7 +35,9 @@ const NavBar = () => {
 
   return (
     <nav className="bg-currentColor flex justify-between items-center h-24 md:max-w-[1920px] md:mx-40 lg:mx-70 px-4 text-white">
-      <MainLogo className="text-ourpink-light dark:text-white w-24 h-16 md:w-40 md:h-16" />
+      <Link href={'/'}>
+        <MainLogo className="text-ourpink-light dark:text-white w-24 h-16 md:w-40 md:h-16" />
+      </Link>
     
     {/* Desktop Nav */}
       <ul className="hidden md:flex">

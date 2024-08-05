@@ -1,11 +1,12 @@
-export async function generateMetadata({params,searchParams}, parent) {
-    title: `Productos : ${params}`
-}
+'use client'
+import ItemListContainer from "@/app/components/ui/ItemListContainer/ItemListContainer"
+import { useParams } from "next/navigation"
 
 const Productos = ({params}) => {
+    const { categoryId } = useParams()
     return (
         <div>
-            Estas viendo : {params.category}
+            <ItemListContainer tittle={params.category}/>
         </div>
     )
 }

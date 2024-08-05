@@ -4,7 +4,7 @@ import ItemListContainer from "../components/ui/ItemListContainer/ItemListContai
 const Products = () => {
   return (
     <div>
-      <ItemListContainer tittle={"Nuestros Cursos"} />
+      <ItemListContainer  tittle={'Productos'}/>
     </div>
   );
 };
