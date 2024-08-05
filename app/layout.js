@@ -5,6 +5,8 @@ import Footer from "./components/ui/Semantic/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
+
 export const metadata = {
   title: 'Playground 1',
   description: 'Página creada a modo de playground para ir probando las herramientras aprendidas durante la cursada sin afectar al proyecto final',

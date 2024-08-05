@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import ItemListContainer from "../components/ui/ItemListContainer/ItemListContainer";
 
 const Products = () => {
   return (
-    <div>page</div>
-  )
-}
+    <div>
+      <ItemListContainer tittle={"Nuestros Cursos"} />
+    </div>
+  );
+};
 
-export default Products
+export default Products;

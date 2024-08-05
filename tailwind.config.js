@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        serif: "Permanent Marker"
+      },
       container: {
         center: true,
       },
