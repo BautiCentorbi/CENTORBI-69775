@@ -44,14 +44,14 @@ export const products = [
     {   
         id : 7,
         img: 'https://firebasestorage.googleapis.com/v0/b/next-curs.appspot.com/o/frontendDev.png?alt=media&token=a25dd90c-3c37-4803-9d27-e797ddd8d86f',
-        name: 'Frontend Developer Carreer',
+        name: 'Frontend Carreer',
         description: 'Lorem Impsum dolor sit amet consceptuars it all jaesn masjes niptum sala ma lecum',
         category: 'web-development',
     },
     { 
         id : 8,
         img: 'https://firebasestorage.googleapis.com/v0/b/next-curs.appspot.com/o/backendDev.png?alt=media&token=18d85e01-eef4-48dc-aa61-131de610cd52',
-        name: 'Backend Developer Carreer',
+        name: 'Backend Carreer',
         description: 'Lorem Impsum dolor sit amet consceptuars it all jaesn masjes niptum sala ma lecum',
         category: 'backend-development',
     },
