@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import MainLogo from "../../icons/MainLogo";
@@ -12,8 +12,6 @@ const NavBar = () => {
   const handleNav = () => {
     setNav(!nav)
   }
-
-  const router = useRouter
 
   const navItems = [
     {
@@ -31,7 +29,9 @@ const NavBar = () => {
   ]
   
   const pathname = usePathname()
-  console.log(pathname)
+  useEffect(() =>{
+    setNav(false)
+  }, [pathname])
 
   return (
     <nav className="bg-currentColor flex justify-between items-center h-24 md:max-w-[1920px] md:mx-40 lg:mx-70 px-4 text-white">
@@ -42,7 +42,7 @@ const NavBar = () => {
     {/* Desktop Nav */}
       <ul className="hidden md:flex">
         {navItems.map((item) => (
-          <Link key={item.label} href={item.href} className={`${pathname === item.href ? 'rounded-none border-ourpink-dark border-b-2 hover:border-0 hover:rounded-xl' : ''} px-4 py-2 text-black font-medium text-xl hover:text-white hover:bg-ourpink-light dark:text-white dark:hover:bg-ourpink-dark rounded-xl m-2 cursor-pointer duration-300 dark:hover:text-black hover:font-semibold`}>
+          <Link key={item.label} href={item.href} className={`${pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href)) ? 'rounded-none border-ourpink-dark border-b-2 hover:border-0 hover:rounded-xl' : ''} px-4 py-2 text-black font-medium text-xl hover:text-white hover:bg-ourpink-light dark:text-white dark:hover:bg-ourpink-dark rounded-xl m-2 cursor-pointer duration-300 dark:hover:text-black hover:font-semibold`}>
             {item.label}
           </Link>
         ))}
@@ -54,7 +54,7 @@ const NavBar = () => {
       </div>
 
       {/* Mobile Nav */}
-      <ul className={`${nav ? 'md:hidden flex flex-col fixed left-0 top-0  h-full border-r border-r-gray-900 bg-background-dark ease-in-out duration-500' : 'flex flex-col ease-in-out  duration-500 fixed top-0 bottom-0 left-[-100%]'} w-[200px]`}>
+      <ul className={`${nav ? 'z-50 md:hidden flex flex-col fixed left-0 top-0  h-full border-r border-r-gray-900 bg-background-dark ease-in-out duration-500' : 'flex flex-col ease-in-out  duration-500 fixed top-0 bottom-0 left-[-100%]'} w-[200px]`}>
         <Image
           src={"/images/MainLogo.png"}
           height={144}

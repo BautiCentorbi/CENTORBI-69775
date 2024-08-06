@@ -12,13 +12,11 @@ const ItemListContainer = ({tittle}) => {
     const { category } = useParams()
 
     useEffect(() => {
-        console.log(category)
         setLoading(true)
         const dataProducts = category ? getProductsFiltered(category) : getProducts()
 
         dataProducts
-        .then((data) => {
-            console.log(data) 
+        .then((data) => { 
             setProducts(data)
         })
         .catch((err) => console.log(err))
@@ -28,13 +26,13 @@ const ItemListContainer = ({tittle}) => {
     return (
     <div className='min-h-[80vh] flex flex-col align-center items-center gap-8'>
         <div>
-            <h2 className={'uppercase text-3xl md:text-5xl font-semibold'}>{tittle}</h2>
+            <h2 className={'uppercase text-2xl md:text-5xl font-semibold'}>{tittle}</h2>
         </div>
         {
             loading 
             ? 
                 <div className='flex flex-row align-center justify-center'>
-                    <CircleLoader color='#ffffff'/>
+                    <CircleLoader color='#9D066A'/>
                 </div>
             :
                 <ItemList products={products}/>

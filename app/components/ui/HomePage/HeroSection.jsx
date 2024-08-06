@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import PrimaryButton from "./Buttons/PrimaryButton";
-import SecondaryButton from "./Buttons/SecondaryButton";
+import PrimaryButton from "../Buttons/PrimaryButton";
+import SecondaryButton from "../Buttons/SecondaryButton";
 
 const HeroSection = () => {
   return (
