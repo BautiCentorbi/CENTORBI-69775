@@ -1,14 +1,10 @@
 'use client'
 import ItemDetailContainer from '@/app/components/ui/ItemListContainer/ItemDetailContainer'
-import { products } from '@/data/asyncMock'
 import { useParams } from 'next/navigation'
 import React from 'react'
 
 const ProductDetail = () => {
-  const { id } = useParams()
-  // const singleProduct = products.find(products = products.id == id)
-
-  
+  const { id } = useParams()  
     return (
     <div className='h-full'>
       <ItemDetailContainer />

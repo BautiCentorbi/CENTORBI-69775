@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import MainLogo from "../../icons/MainLogo";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
+import CartWidget from "../../cart/CartWidget";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false)
@@ -47,6 +48,8 @@ const NavBar = () => {
           </Link>
         ))}
       </ul>
+
+      <CartWidget />
 
       {/* Drawer Icon */}
       <div onClick={handleNav} className="block md:hidden">
