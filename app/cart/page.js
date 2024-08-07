@@ -5,10 +5,10 @@ import SecondaryButton from '../components/ui/Buttons/SecondaryButton'
 
 const Cart = () => {
   return (
-    <div className='h-screen flex flex-col md:flex-row gap-4 gap-16 justify-center mt-4 md:mt-16'>
+    <div className='mx-auto h-screen flex flex-col md:flex-row gap-4 gap-16 md:justify-center mt-4 md:mt-16'>
       <div>
         <h1 className='text-2xl md:text-5xl font-bold my-4'>Items en el Carrito</h1>
-        <div className='bg-background-dark rounded-lg grid grid-cols-4 h-fit items-center justify-items-center px-4'>
+        <div className='bg-background-dark rounded-lg grid grid-cols- md:grid-cols-4 h-fit items-center justify-items-center px-4'>
           <picture className='m-4'>
             <Image 
               src={'https://firebasestorage.googleapis.com/v0/b/next-curs.appspot.com/o/userInterface.png?alt=media&token=1be4f882-8ee9-4a4b-95d4-f6d5a309dfd1'}
@@ -17,7 +17,7 @@ const Cart = () => {
               alt='name'
             />
           </picture>
-          <h2 className='text-lg md:text-xl uppercase font-bold'>UX/UI Designer Course</h2>
+          <h2 className='text-md md:text-xl uppercase font-bold'>UX/UI Designer Course</h2>
           <h3>Cantidad: 2</h3>
           <h3>Total: 90.000,00 ARS</h3>
         </div>
