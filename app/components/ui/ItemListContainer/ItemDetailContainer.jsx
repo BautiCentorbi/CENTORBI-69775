@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
     console.log(product)
 
     return (
-    <div className='flex items-center justify-center w-full h-full'>
+    <div className='flex mt-6 md:mt-20 items-start justify-center w-full h-screen'>
         {
             loading ?
             <div className='flex flex-row justify-center items-center h-[60vh'>
