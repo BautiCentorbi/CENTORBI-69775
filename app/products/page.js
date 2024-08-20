@@ -1,12 +1,20 @@
-import React from "react";
-import ItemListContainer from "../components/ui/ItemListContainer/ItemListContainer";
+import React from 'react'
+import ItemList from '../components/ui/ItemList/ItemList'
 
-const Products = () => {
-  return (
-    <div>
-      <ItemListContainer  tittle={'Productos'}/>
-    </div>
-  );
-};
+const getProducts = async() => {
+    const data = await fetch(`http://localhost:3000/api/productos`)
+    const products = await data.json()
+    return products
+}
 
-export default Products;
+const Productos = async() => {
+    const products = await getProducts()
+
+    return (
+    <>
+        <ItemList productos={products}/>
+    </>
+  )
+}
+
+export default Productos

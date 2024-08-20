@@ -5,7 +5,7 @@ import SecondaryButton from '../components/ui/Buttons/SecondaryButton'
 
 const Cart = () => {
   return (
-    <div className='mx-auto h-screen flex flex-col md:flex-row gap-4 gap-16 md:justify-center mt-4 md:mt-16'>
+    <div className='mx-auto npmh-screen flex flex-col md:flex-row gap-4 gap-16 md:justify-center mt-4 md:mt-16'>
       <div>
         <h1 className='text-2xl md:text-5xl font-bold my-4'>Items en el Carrito</h1>
         <div className='bg-background-dark rounded-lg grid grid-cols- md:grid-cols-4 h-fit items-center justify-items-center px-4'>

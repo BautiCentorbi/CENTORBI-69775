@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getProductsById, priceConverter } from '@/data/asyncMock'
+import { priceConverter } from '@/data/asyncMock'
 import PrimaryButton from '../Buttons/PrimaryButton'
 
 const Item = ({name,img,stock,price,description,id}) => {

@@ -1,7 +1,6 @@
 import React from 'react'
 import InfoSection from '../HomePage/InfoSection'
 import HeroSection from '../HomePage/HeroSection'
-import ItemListContainer from '../ItemListContainer/ItemListContainer'
 // import Countdown from '../Countdown/Countdown'
 
 

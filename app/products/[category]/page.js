@@ -1,14 +1,20 @@
-'use client'
-import ItemListContainer from "@/app/components/ui/ItemListContainer/ItemListContainer"
-import { useParams } from "next/navigation"
+import React from 'react'
+import ItemList from '@/app/components/ui/ItemList/ItemList'
 
-const Productos = ({params}) => {
-    const { categoryId } = useParams()
-    return (
-        <div>
-            <ItemListContainer tittle={params.category}/>
-        </div>
+const getProducts = async(category) => {
+    const data = await fetch(`http://localhost:3000/api/productos/${category}`)
+    const productos = await data.json()
+    return productos
+}
+
+const Products = async({params}) => {
+    const { category } = params
+    const products = await getProducts(category)
+    return( 
+        <>
+            <ItemList category={category} productos={products} />
+        </>
     )
 }
 
-export default Productos
+export default Products

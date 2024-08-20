@@ -101,22 +101,6 @@ export const products = [
     },
 ]
 
-export const getProducts = () => {
-    return new Promise ((res) => {
-        setTimeout(() => {
-            res(products)
-        }, 2000)
-    })
-}
-export const getProductsFiltered = (categoryId) => {
-    return new Promise ((res) => {
-        const filteredProducts = products.filter(producto => producto.category === categoryId)
-        setTimeout(() => {
-            res(filteredProducts)
-        }, 2000)
-    })
-}
-
 export const getProductsById = (id) => {
     return new Promise ((res) => {
         console.log(id)
