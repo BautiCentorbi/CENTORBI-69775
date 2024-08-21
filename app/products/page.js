@@ -3,8 +3,8 @@ import ItemList from '../components/ui/ItemList/ItemList'
 
 const getProducts = async() => {
     const data = await fetch(`http://localhost:3000/api/productos`)
-    const products = await data.json()
-    return products
+    const productos = await data.json()
+    return productos
 }
 
 const Productos = async() => {
@@ -12,7 +12,9 @@ const Productos = async() => {
 
     return (
     <>
-        <ItemList productos={products}/>
+        <ItemList 
+            productos={products}
+        />
     </>
   )
 }

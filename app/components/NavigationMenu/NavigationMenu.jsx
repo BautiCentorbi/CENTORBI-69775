@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { products } from "@/data/asyncMock";
 import { usePathname } from "next/navigation";
-import PrimaryButton from "../ui/Buttons/PrimaryButton";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"
 
 function totalCategories(data) {

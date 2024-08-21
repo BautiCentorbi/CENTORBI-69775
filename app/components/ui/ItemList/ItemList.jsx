@@ -1,10 +1,10 @@
 import React from 'react';
 import Item from '../Item/Item';
 
-const ItemList = async({ category, products } ) => {
+const ItemList = ({ productos} ) => {
   return (
     <div className='grid grid-cols-1 md:grid-cols-3 gap-8 justify-center align-center'>
-      {products.map((el, index) => (
+      {productos?.map((el, index) => (
         <div key={el.id}>
           <Item 
             name={el.name}
