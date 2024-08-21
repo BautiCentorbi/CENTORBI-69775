@@ -1,4 +1,4 @@
-import { products } from "../../../../data/asyncMock";
+import { products } from "@/data/asyncMock";
 import { NextResponse } from "next/server";
 
 const sleep = (timer) => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemList from '@/app/components/ui/ItemList/ItemList'
+import ItemList from '../../components/ui/ItemList/ItemList'
 
 const getProducts = async(category) => {
     const data = await fetch(`http://localhost:3000/api/productos/${category}`)
